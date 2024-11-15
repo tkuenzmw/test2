@@ -8,7 +8,7 @@ figureHandle = figure();
 
 subplot(2,3,1:3)
 [time, signal] = getNormedEcgRange(ecgData,0,60);
-makeSubplot(time, signal, "All data");
+makeSubplot(time, signal, "Whole ECG");
 
 subplot(2,3,4);
 [time, signal] = getNormedEcgRange(ecgData,0,5);
@@ -33,7 +33,7 @@ normSignal = normSignal - mean(normSignal);
 end
 
 function makeSubplot(time, signal, titleText)
-plot(time, signal);
+plot(time, signal, "k");
 xlabel("Time (s)")
 ylabel("Signal (norm.)")
 title(titleText)
