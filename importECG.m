@@ -20,5 +20,5 @@ opts.EmptyLineRule = "read";
 T = readtable(filename, opts);
 T.Time = seconds(T.Time);
 T = table2timetable(T);
-% T = repairECG(T); % uncomment this to add the preprocessing step
+T = repairECG(T); % uncomment this to add the preprocessing step
 end
